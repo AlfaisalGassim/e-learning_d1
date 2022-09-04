@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	/* background: radial-gradient(circle, transparent 20%, #63bc68 20%, #63bc68 80%, transparent 80%, transparent),
+		radial-gradient(circle, transparent 20%, #63bc68 20%, #63bc68 80%, transparent 80%, transparent) 12.5px 12.5px,
+		linear-gradient(#b8bc4a 1px, transparent 1px) 0 -0.5px,
+		linear-gradient(90deg, #b8bc4a 1px, #63bc68 1px) -0.5px 0;
+	background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px; */
+	background-color: #ffffff;
+	background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent),
+		radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 12.5px 12.5px,
+		linear-gradient(#a0a0a5 1px, transparent 1px) 0 -0.5px,
+		linear-gradient(90deg, #a0a0a5 1px, #ffffff 1px) -0.5px 0;
+	background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.main-item img {
+	filter: grayscale();
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+	transition: all 0.4s ease-in-out;
+}
+
+.e-item {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.e-item-1 {
+	animation: move1 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: .25s;
+}
+.e-item-2 {
+	animation: move2 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: .75s;
+}
+.e-item-3 {
+	animation: move3 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.25s;
+}
+.e-item-4 {
+	animation: move4 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.75s;
+}
+.e-item-5 {
+	animation: move5 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 2.25s;
+}
+.e-item-6 {
+	animation: move6 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 2.75s;
+}
+.e-item-7 {
+	animation: move7 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 3.25s;
+}
+
+.e-item:hover {
+	cursor: pointer;
+}
+
+.e-item img {
+	filter: grayscale();
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	border: 0px solid whitesmoke;
+	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+	margin-bottom: 1.25rem;
+	transition: all 0.4s ease-in-out;
+	background: rgb(78, 167, 78);
+}
+
+.e-item:hover img {
+	filter: none;
+	scale: 1.2;
+}
+.e-item a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.title {
+	font-family: "Dancing Script", "Cario", cursive;
+	font-size: 1.25rem;
+	color: black;
+	position: relative;
+}
+
+.title::after {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 2px;
+	background-color: #63bc68;
+	left: 50%;
+	bottom: -10px;
+	transition: all 0.4s ease-in-out;
+}
+
+.e-item:hover .title::after {
+	width: 100%;
+	left: 0;
+}
+
+#nav {
+	position: absolute;
+	left: 0px;
+	height: 40px;
+	background-color: transparent;
+	width: 100%;
+	text-align: center;
+}
+#nav ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	list-style-type: none;
+}
+#nav ul li {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+#nav ul li a {
+	font-family: "Dancing Script", cursive;
+	text-decoration: none;
+	padding: 10px 20px;
+	display: block;
+	color: black;
+	text-align: center;
+}
+#nav ul li a:hover {
+	color: rgb(78, 167, 78);
+	width: 100%;
+	left: 0;
+}
+#nav ul li a::after {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 2px;
+	background-color: rgb(78, 167, 78);
+	left: 50%;
+	bottom: -10px;
+	transition: all 0.4s ease-in-out;
+}
+.box{
+	background: url("img/globe.jpeg");
+}
+
+#box {
+	background: url("https://img.freepik.com/premium-photo/concept-rich-gold-black-world-map-business-finance-isolated-background-3d-illustration_121658-841.jpg?w=996");
+	opacity: 100%;
+	filter: hue(333);
+	/*border:2px solid #000;*/
+	border-radius: 50%;
+	width: 450px;
+	height: 450px;
+	animation: movimiento 20s linear 0s infinite;
+	box-shadow: 6px 7px 21px 2px rgba(0, 0, 0, 0.41), -6px -7px 50px 2px rgba(0, 0, 0, 0.41), 0 0 10px 10px #000 inset;
+
+	/*box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+               -8px -8px 15px #000 ,
+               2px 2px 25px #000 ,
+               -45px -45px 25px RGBA(0,0,0, 0.5) , 
+               25px 25px 45px RGBA(0,0,0, 0.45) ;*/
+	margin: 6em auto;
+	transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+@keyframes movimiento {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 1000px 0;
+	}
+}
+@keyframes move1 {
+	from {
+		top: 50%;
+		left: 50%;
+	}
+	to {
+		top: 13%;
+		left: 23%;
+	}
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 100%;
+	}
+}
+@keyframes move2 {
+	from {
+		top: 50%;
+		left: 50%;
+	}
+	to {
+		top: 43%;
+		left: 17%;
+	}
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 100%;
+	}
+}
+@keyframes move3 {
+	from {
+		top: 50%;
+		left: 50%;
+	}
+	to {
+		top: 72%;
+		left: 23%;
+	}
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 100%;
+	}
+}
+@keyframes move4 {
+	from {
+		top: 50%;
+		right: 50%;
+	}
+	to {
+		top: 13%;
+		right: 21%;
+	}
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 100%;
+	}
+}
+@keyframes move5 {
+	from {
+		top: 50%;
+		right: 50%;
+	}
+	to {
+		top: 43%;
+		right: 15%;
+	}
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 100%;
+	}
+}
+@keyframes move6 {
+	from {
+		top: 50%;
+		right: 50%;
+	}
+	to {
+		top: 72%;
+		right: 21%;
+	}
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 100%;
+	}
+}
+@keyframes move7 {
+	from {
+		top: 50%;
+		left: 50%;
+	}
+	to {
+		top: 20%;
+		left: 7%;
+	}
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 100%;
+	}
+}
+
+#catalyst {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	width: 70px;
+	height: 70px;
+}
+#accredited {
+	position: absolute;
+	bottom: 10px;
+	left: 90px;
+	width: 70px;
+	height: 70px;
+}
+#UT-Tabuk {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 70px;
+	height: 70px;
+}
+#E-Learning {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 100px;
+	height: 70px;
+}
+.footer-main {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
+}
+#copy-rights {
+	position: absolute;
+	right: 50%;
+	bottom: 0%;
+}
