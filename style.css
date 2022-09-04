@@ -6,6 +6,7 @@
 	margin: 0;
 	padding: 0;
 }
+
 body {
 	/* background: radial-gradient(circle, transparent 20%, #63bc68 20%, #63bc68 80%, transparent 80%, transparent),
 		radial-gradient(circle, transparent 20%, #63bc68 20%, #63bc68 80%, transparent 80%, transparent) 12.5px 12.5px,
@@ -18,6 +19,8 @@ body {
 		linear-gradient(#a0a0a5 1px, transparent 1px) 0 -0.5px,
 		linear-gradient(90deg, #a0a0a5 1px, #ffffff 1px) -0.5px 0;
 	background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
+	/* background: rgb(3, 140, 76);
+	background: radial-gradient(circle, rgba(3, 140, 76, 1) 0%, rgba(33, 213, 129, 1) 100%); */
 }
 
 .container {
@@ -32,8 +35,9 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+
 .main-item img {
-	filter: grayscale();
+	filter: grayscale(50%);
 	width: 300px;
 	height: 300px;
 	border-radius: 50%;
@@ -47,36 +51,43 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+
 .e-item-1 {
 	animation: move1 1.5s;
 	animation-fill-mode: forwards;
 	animation-delay: .25s;
 }
+
 .e-item-2 {
 	animation: move2 1.5s;
 	animation-fill-mode: forwards;
 	animation-delay: .75s;
 }
+
 .e-item-3 {
 	animation: move3 1.5s;
 	animation-fill-mode: forwards;
 	animation-delay: 1.25s;
 }
+
 .e-item-4 {
 	animation: move4 1.5s;
 	animation-fill-mode: forwards;
 	animation-delay: 1.75s;
 }
+
 .e-item-5 {
 	animation: move5 1.5s;
 	animation-fill-mode: forwards;
 	animation-delay: 2.25s;
 }
+
 .e-item-6 {
 	animation: move6 1.5s;
 	animation-fill-mode: forwards;
 	animation-delay: 2.75s;
 }
+
 .e-item-7 {
 	animation: move7 1.5s;
 	animation-fill-mode: forwards;
@@ -88,21 +99,23 @@ body {
 }
 
 .e-item img {
-	filter: grayscale();
+	filter: grayscale(70%);
 	width: 120px;
 	height: 120px;
 	border-radius: 50%;
 	border: 0px solid whitesmoke;
-	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
-	margin-bottom: 1.25rem;
+	box-shadow: 3px 4px 11px 1px rgba(46, 46, 46, 0.363), -3px -4px 11px 1px rgba(46, 46, 46, 0.363);
+	margin-bottom: 1.5rem;
 	transition: all 0.4s ease-in-out;
-	background: rgb(78, 167, 78);
+	background: #F2C438;
 }
 
 .e-item:hover img {
 	filter: none;
 	scale: 1.2;
 }
+
+
 .e-item a {
 	color: inherit;
 	text-decoration: none;
@@ -139,17 +152,20 @@ body {
 	width: 100%;
 	text-align: center;
 }
+
 #nav ul {
 	margin: 0;
 	padding: 0;
 	display: inline-block;
 	list-style-type: none;
 }
+
 #nav ul li {
 	margin: 0;
 	padding: 0;
 	float: left;
 }
+
 #nav ul li a {
 	font-family: "Dancing Script", cursive;
 	text-decoration: none;
@@ -158,11 +174,13 @@ body {
 	color: black;
 	text-align: center;
 }
+
 #nav ul li a:hover {
-	color: rgb(78, 167, 78);
+	color: #F2C438;
 	width: 100%;
 	left: 0;
 }
+
 #nav ul li a::after {
 	position: absolute;
 	content: "";
@@ -173,20 +191,21 @@ body {
 	bottom: -10px;
 	transition: all 0.4s ease-in-out;
 }
-.box{
+
+.box {
 	background: url("img/globe.jpeg");
 }
 
 #box {
-	background: url("https://img.freepik.com/premium-photo/concept-rich-gold-black-world-map-business-finance-isolated-background-3d-illustration_121658-841.jpg?w=996");
+	background: url("img/globe.jpeg");
 	opacity: 100%;
 	filter: hue(333);
 	/*border:2px solid #000;*/
 	border-radius: 50%;
 	width: 450px;
 	height: 450px;
-	animation: movimiento 20s linear 0s infinite;
-	box-shadow: 6px 7px 21px 2px rgba(0, 0, 0, 0.41), -6px -7px 50px 2px rgba(0, 0, 0, 0.41), 0 0 10px 10px #000 inset;
+	animation: movimiento 30s linear 0s infinite;
+	box-shadow: 6px 7px 21px 2px rgba(46, 46, 46, 0.363), -6px -7px 50px 2px rgba(46, 46, 46, 0.363), 0 0 30px 30px rgba(255, 255, 255, 0.87) inset, 0px 0px 2px 2px rgba(46, 46, 46, 0.849) inset;
 
 	/*box-shadow:0 0 25px RGBA(255,255,255, 0.10),
                -8px -8px 15px #000 ,
@@ -197,122 +216,155 @@ body {
 	transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
 }
 
+#box:hover {
+	animation-play-state: paused;
+}
+
 @keyframes movimiento {
 	0% {
 		background-position: 0 0;
 	}
+
 	100% {
-		background-position: 1000px 0;
+		background-position: 826px 0;
 	}
 }
+
 @keyframes move1 {
 	from {
 		top: 50%;
 		left: 50%;
 	}
+
 	to {
 		top: 13%;
 		left: 23%;
 	}
+
 	0% {
 		scale: 0;
 	}
+
 	100% {
 		scale: 100%;
 	}
 }
+
 @keyframes move2 {
 	from {
 		top: 50%;
 		left: 50%;
 	}
+
 	to {
 		top: 43%;
 		left: 17%;
 	}
+
 	0% {
 		scale: 0;
 	}
+
 	100% {
 		scale: 100%;
 	}
 }
+
 @keyframes move3 {
 	from {
 		top: 50%;
 		left: 50%;
 	}
+
 	to {
 		top: 72%;
 		left: 23%;
 	}
+
 	0% {
 		scale: 0;
 	}
+
 	100% {
 		scale: 100%;
 	}
 }
+
 @keyframes move4 {
 	from {
 		top: 50%;
 		right: 50%;
 	}
+
 	to {
 		top: 13%;
 		right: 21%;
 	}
+
 	0% {
 		scale: 0;
 	}
+
 	100% {
 		scale: 100%;
 	}
 }
+
 @keyframes move5 {
 	from {
 		top: 50%;
 		right: 50%;
 	}
+
 	to {
 		top: 43%;
 		right: 15%;
 	}
+
 	0% {
 		scale: 0;
 	}
+
 	100% {
 		scale: 100%;
 	}
 }
+
 @keyframes move6 {
 	from {
 		top: 50%;
 		right: 50%;
 	}
+
 	to {
 		top: 72%;
 		right: 21%;
 	}
+
 	0% {
 		scale: 0;
 	}
+
 	100% {
 		scale: 100%;
 	}
 }
+
 @keyframes move7 {
 	from {
 		top: 50%;
 		left: 50%;
 	}
+
 	to {
 		top: 20%;
 		left: 7%;
 	}
+
 	0% {
 		scale: 0;
 	}
+
 	100% {
 		scale: 100%;
 	}
@@ -322,30 +374,42 @@ body {
 	position: absolute;
 	bottom: 10px;
 	left: 10px;
-	width: 70px;
-	height: 70px;
+	max-width: 100px;
+	max-height: 100px;
+	width: auto;
+	height: auto;
 }
+
 #accredited {
 	position: absolute;
 	bottom: 10px;
-	left: 90px;
-	width: 70px;
-	height: 70px;
+	left: 120px;
+	max-width: 100px;
+	max-height: 100px;
+	width: auto;
+	height: auto;
 }
+
 #UT-Tabuk {
 	position: absolute;
 	top: 10px;
 	left: 10px;
-	width: 70px;
-	height: 70px;
+	max-width: 100px;
+	max-height: 100px;
+	width: auto;
+	height: auto;
 }
+
 #E-Learning {
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	width: 100px;
-	height: 70px;
+	max-width: 200px;
+	max-height: 200px;
+	width: auto;
+	height: auto;
 }
+
 .footer-main {
 	position: fixed;
 	left: 0;
@@ -355,6 +419,7 @@ body {
 	color: white;
 	text-align: center;
 }
+
 #copy-rights {
 	position: absolute;
 	right: 50%;
