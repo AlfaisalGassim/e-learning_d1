@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Saira+Condensed:wght@100;400;600;700&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -8,24 +9,30 @@
 }
 
 body {
+	display: grid;
+	font-family: 'Saira Condensed', sans-serif;
+	color: #F5E9CF;
 	/* background: radial-gradient(circle, transparent 20%, #63bc68 20%, #63bc68 80%, transparent 80%, transparent),
 		radial-gradient(circle, transparent 20%, #63bc68 20%, #63bc68 80%, transparent 80%, transparent) 12.5px 12.5px,
 		linear-gradient(#b8bc4a 1px, transparent 1px) 0 -0.5px,
 		linear-gradient(90deg, #b8bc4a 1px, #63bc68 1px) -0.5px 0;
 	background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px; */
-	background-color: #ffffff;
+	/* background-color: #ffffff;
 	background: radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent),
 		radial-gradient(circle, transparent 20%, #ffffff 20%, #ffffff 80%, transparent 80%, transparent) 12.5px 12.5px,
 		linear-gradient(#a0a0a5 1px, transparent 1px) 0 -0.5px,
 		linear-gradient(90deg, #a0a0a5 1px, #ffffff 1px) -0.5px 0;
-	background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px;
+	background-size: 25px 25px, 25px 25px, 12.5px 12.5px, 12.5px 12.5px; */
 	/* background: rgb(3, 140, 76);
 	background: radial-gradient(circle, rgba(3, 140, 76, 1) 0%, rgba(33, 213, 129, 1) 100%); */
+	background: rgb(79, 88, 61);
+	opacity: 1;
+	background-size: 7px 7px;
+	background-image: repeating-linear-gradient(45deg, #4f583d 0, #4f583d 0.7000000000000001px, #5e684a 0, #5e684a 50%);
 }
 
 .container {
-	height: 100vh;
-	display: flex;
+	height: auto;
 	justify-content: center;
 	align-items: center;
 }
@@ -46,6 +53,8 @@ body {
 }
 
 .e-item {
+	top: 50%;
+	
 	position: absolute;
 	display: flex;
 	flex-direction: column;
@@ -100,19 +109,20 @@ body {
 
 .e-item img {
 	filter: grayscale(70%);
-	width: 120px;
-	height: 120px;
+	width: 100px;
+	height: 100px;
+	background-size: auto;
 	border-radius: 50%;
-	border: 0px solid whitesmoke;
 	box-shadow: 3px 4px 11px 1px rgba(46, 46, 46, 0.363), -3px -4px 11px 1px rgba(46, 46, 46, 0.363);
-	margin-bottom: 1.5rem;
+	margin-bottom: 1.6rem;
 	transition: all 0.4s ease-in-out;
-	background: #F2C438;
+	background-color: #D0B792;
+
 }
 
 .e-item:hover img {
 	filter: none;
-	scale: 1.2;
+	scale: 1.4;
 }
 
 
@@ -122,9 +132,8 @@ body {
 }
 
 .title {
-	font-family: "Dancing Script", "Cario", cursive;
+	font-family: 'Cairo', sans-serif;
 	font-size: 1.25rem;
-	color: black;
 	position: relative;
 }
 
@@ -133,7 +142,7 @@ body {
 	content: "";
 	width: 0%;
 	height: 2px;
-	background-color: #63bc68;
+	background-color: #8FA6AC;
 	left: 50%;
 	bottom: -10px;
 	transition: all 0.4s ease-in-out;
@@ -145,9 +154,8 @@ body {
 }
 
 #nav {
-	position: absolute;
 	left: 0px;
-	height: 40px;
+	
 	background-color: transparent;
 	width: 100%;
 	text-align: center;
@@ -167,16 +175,16 @@ body {
 }
 
 #nav ul li a {
-	font-family: "Dancing Script", cursive;
+	
 	text-decoration: none;
 	padding: 10px 20px;
 	display: block;
-	color: black;
+	color: #F5E9CF;
 	text-align: center;
 }
 
 #nav ul li a:hover {
-	color: #F2C438;
+	color: #8FA6AC;
 	width: 100%;
 	left: 0;
 }
@@ -197,15 +205,17 @@ body {
 }
 
 #box {
-	background: url("img/globe.jpeg");
+	background: url("img/globe3.jpeg");
 	opacity: 100%;
 	filter: hue(333);
+	background-size: cover;
+	background-color: #f2f2f2;
 	/*border:2px solid #000;*/
 	border-radius: 50%;
 	width: 450px;
 	height: 450px;
 	animation: movimiento 30s linear 0s infinite;
-	box-shadow: 6px 7px 21px 2px rgba(46, 46, 46, 0.363), -6px -7px 50px 2px rgba(46, 46, 46, 0.363), 0 0 30px 30px rgba(255, 255, 255, 0.87) inset, 0px 0px 2px 2px rgba(46, 46, 46, 0.849) inset;
+	box-shadow: 6px 7px 21px 2px rgba(46, 46, 46, 0.363), -6px -7px 50px 2px rgba(46, 46, 46, 0.90), 0 0 30px 30px rgba(255, 255, 255, 0.87) inset, 0px 0px 2px 2px rgba(46, 46, 46, 0.849) inset;
 
 	/*box-shadow:0 0 25px RGBA(255,255,255, 0.10),
                -8px -8px 15px #000 ,
@@ -226,7 +236,7 @@ body {
 	}
 
 	100% {
-		background-position: 826px 0;
+		background-position: 500px 0;
 	}
 }
 
@@ -371,57 +381,60 @@ body {
 }
 
 #catalyst {
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
-	max-width: 100px;
-	max-height: 100px;
+	float: left;
+	max-width: 70px;
+	max-height: 70px;
 	width: auto;
 	height: auto;
+	bottom: 0;
+	margin: 10px;
 }
 
 #accredited {
-	position: absolute;
-	bottom: 10px;
-	left: 120px;
-	max-width: 100px;
-	max-height: 100px;
+	float: left;
+	max-width: 70px;
+	max-height: 70px;
 	width: auto;
 	height: auto;
+	bottom: 0;
+	margin: 10px;
 }
 
 #UT-Tabuk {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	max-width: 100px;
-	max-height: 100px;
+	float: left;
+	bottom: 0px;
+	max-width: 70px;
+	max-height: 70px;
 	width: auto;
 	height: auto;
+	margin: 10px;
 }
 
 #E-Learning {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	max-width: 200px;
-	max-height: 200px;
+	float: left;
+	bottom: 0px;
+	max-width: 100px;
+	max-height: 70px;
 	width: auto;
 	height: auto;
+	margin: 10px;
 }
 
-.footer-main {
-	position: fixed;
+.footer {
+	font-family: 'Cairo', sans-serif;
+	font-weight: 100;
+	font-size: smaller;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: red;
-	color: white;
+	background: transparent;
+	color: #F5E9CF;
 	text-align: center;
+	padding: 10px;
+	position: absolute;
 }
 
-#copy-rights {
-	position: absolute;
-	right: 50%;
-	bottom: 0%;
+#copyrights{
+	bottom: 0px;
 }
+
